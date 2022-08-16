@@ -10,7 +10,7 @@
   <script src="https://unpkg.com/scrollreveal"></script>
 
   <meta name="title" content="RobotX - Coming Soon...">
-  <meta name="description" content="RobotX - A Solana NFT Collection of 4,444 Robots of the Professor X Army">
+  <meta name="description" content="RobotX - A Solana NFT Collection of 4,444 Robots of Professor X Army">
   <meta name="keywords"
     content="robotx, robots, robot, nft, nft collection, solana, solana nft, solana nft collection, robotx nft, robotx solana nft, robotx nft collection, 4444 nft, 4444 robots, 3d nft, robot 3d nft, robot 3d">
   <meta name="robots" content="index, follow">
@@ -18,7 +18,14 @@
   <meta name="language" content="English">
 </head>
 
-<body style="background-color: black;">
+<style>
+  body {
+    background-color: black;
+  }
+</style>
+
+<body>
+  <app-root></app-root>
   <style>
     @font-face {
       font-family: Monument;
@@ -93,9 +100,13 @@
         transform: rotate(0deg);
       }
     }
+
+    #rond {
+      display: none;
+    }
   </style>
 
-  <svg id="rond" style="display: none;" xmlns="http://www.w3.org/2000/svg" xml:lang="en"
+  <svg id="rond" xmlns="http://www.w3.org/2000/svg" xml:lang="en"
     xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
 
     <defs>
@@ -128,15 +139,18 @@
 
       window.requestAnimationFrame(mouseMove)
     }
-
-    mouseMove()
-
-    var tl = gsap.timeline({ defaults: { ease: "power2.inOut" } })
+    mouseMove();
 
   </script>
 
+  <style>
+    #logo {
+      border-radius: 50%; width : 2%; min-width : 70px; border: 1px white;
+    }
+  </style>
+
   <a href="https://twitter.com/WeAreRobotX" target="_blank" title="Follow RobotX on Twitter">
-    <img src="/assets/logo.png" alt="" style="border-radius: 50%; width : 2%; min-width : 70px; border: 1px white;">
+    <img id="logo" src="/assets/logo.png" alt="">
   </a>
 
   <div>
@@ -2157,20 +2171,27 @@
                                                                                                                                                                                                                                                                                                                                                                                             <div>
                                                                                                                                                                                                                                                                                                                                                                                               <div>
                                                                                                                                                                                                                                                                                                                                                                                                 <div>
-                                                                                                                                                                                                                                                                                                                                                                                                  <h1
-                                                                                                                                                                                                                                                                                                                                                                                                    style="margin-top: 75px; align-items: center; color: white; display: flex; height: 80%; justify-content: center; position: absolute; width: 100%; left: 0; top: 0; z-index: 1;">
+                                                                                                                                                                                                                                                                                                                                                                                                  <style>
+                                                                                                                                                                                                                                                                                                                                                                                                    #coming {
+                                                                                                                                                                                                                                                                                                                                                                                                      margin-top: 75px; align-items: center; color: white; display: flex; height: 80%; justify-content: center; position: absolute; width: 100%; left: 0; top: 0; z-index: 1;
+                                                                                                                                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                                                                                                                                    #link {
+                                                                                                                                                                                                                                                                                                                                                                                                      margin-top: 120px; align-items: center; color: white; display: flex; height: 80%; justify-content: center; position: absolute; width: 100%; left: 0; top: 0; z-index: 1;
+                                                                                                                                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                                                                                                                                    #patient {
+                                                                                                                                                                                                                                                                                                                                                                                                      position:fixed; bottom: 3px; right: 10px; color: white;
+                                                                                                                                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                                                                                                                                  </style>
+
+                                                                                                                                                                                                                                                                                                                                                                                                  <h1 id="coming">
                                                                                                                                                                                                                                                                                                                                                                                                     Coming
                                                                                                                                                                                                                                                                                                                                                                                                     Soon...
                                                                                                                                                                                                                                                                                                                                                                                                   </h1>
 
-                                                                                                                                                                                                                                                                                                                                                                                                  <a class="discord"
-                                                                                                                                                                                                                                                                                                                                                                                                    id="link"
-                                                                                                                                                                                                                                                                                                                                                                                                    style=" margin-top: 120px; align-items: center; color: white; display: flex; height: 80%; justify-content: center; position: absolute; width: 100%; left: 0; top: 0; z-index: 1;">
-                                                                                                                                                                                                                                                                                                                                                                                                  </a>
+                                                                                                                                                                                                                                                                                                                                                                                                  <a class="discord" id="link"></a>
 
                                                                                                                                                                                                                                                                                                                                                                                                   <div
-                                                                                                                                                                                                                                                                                                                                                                                                    id="be_patient"
-                                                                                                                                                                                                                                                                                                                                                                                                    style="position:fixed; bottom: 3px; right: 10px; color: white;">
+                                                                                                                                                                                                                                                                                                                                                                                                    id="be_patient">
                                                                                                                                                                                                                                                                                                                                                                                                   </div>
 
                                                                                                                                                                                                                                                                                                                                                                                                   <script>
