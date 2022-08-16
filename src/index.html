@@ -21,6 +21,13 @@
       font-family: 'Monument', 'arial', sans-serif;
       overflow-x: hidden;
       overflow-y: hidden;
+      cursor: none;
+    }
+
+    @media screen and (max-width: 1200px) {
+      svg {
+        display: none;
+      }
     }
 
     @media screen and (min-width: 725px) {
@@ -33,7 +40,6 @@
       h1 {
         font-size: 300%;
       }
-
     }
 
     @media screen and (max-width: 600px) {
@@ -99,24 +105,16 @@
 
     let mouseX = 0
     let mouseY = 0
-    //let intv = 0
 
     window.addEventListener('mousemove', (event) => {
-        // circleSvg.style.top = event.clientY - 45;
-        // circleSvg.style.left = event.clientX - 45;
-
         mouseY = (event.clientY / 16) - (45 / 16) + 'rem'
         mouseX = (event.clientX / 16) - (45 / 16) + 'rem'
     })
 
     const mouseMove = () => {
-        //intv += 1
         
         circleSvg.style.top = mouseY
         circleSvg.style.left = mouseX
-
-        //circleSvg.style.opacity = 1 + Math.sin(intv * .04)
-        //console.log(Math.sin(intv * .04))
 
         window.requestAnimationFrame(mouseMove)
     }
@@ -125,9 +123,6 @@
 
     var tl = gsap.timeline({defaults: {ease: "power2.inOut"}})
 
-    tl.to(circleSvg, {width: 0, opacity: 0})
-    tl.to('body, button', {background: 'white'})
-    tl.pause()
 </script>
 
   <a href="https://twitter.com/WeAreRobotX" target="_blank" title="Follow RobotX on Twitter">
